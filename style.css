@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* 
+    font-familly
+    font-family: 'Goldman', cursive;
+clip-path: polygon(0 79%, 0 44%, 0 0, 95% 0, 100% 25%, 36% 22%, 30% 59%, 100% 48%, 100% 91%, 100% 100%, 38% 100%, 0 100%); 
+*/
+
+.container{
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Goldman', cursive;
+    background-color: rgba(145, 155, 251, 0.8);
+    
+}
+.container > header{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.container-canva{
+    display: flex;
+    flex-direction: row;
+    justify-content: row;
+    align-items: center;
+    
+    
+}
+#canva{
+    border: 5px solid rgb(226, 52, 52);
+    width: 900px;
+    height: 600px;
+    background-color: rgb(27, 28, 59);
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: end;
+    width: 1200px;
+    height:auto;
+   
+    background:linear-gradient(to left, #e228bb,#23d630,#00d4ff);
+}
+.header >p{
+    font-size: 40px;
+    font-weight: 600;
+
+}  
+    
+.dessin{
+    background-color: black;
+    width:100px;
+    height:100px;
+    clip-path: polygon(0 79%, 0 44%, 0 0, 95% 0, 100% 25%, 36% 22%, 30% 59%, 100% 48%, 100% 91%, 100% 100%, 38% 100%, 0 100%);
+}
+.aside-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    
+    
+}
+.aside-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+   
+    
+}
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: flex-start;
+    margin-top: 10px;
+    width: 900px;
+    height: 100px;
+    /* background-color:rgb(27, 28, 59); */
+    /* color: white; */
+}
+.article{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    width:1100px;
+    height: auto;
+    text-indent: 3%;
+   margin-bottom: 20px;
+   border: 2px solid black;
+  
+}
+.section{
+    /* border: 2px solid black; */
+   
+    padding:10px;
+   
+}
+.section >p::first-letter{
+    color:red;
+    font-weight: 600;
+    font-size: 20px;
+
+}
+.section p::first-line{
+    color: white;
+}
+/* starwars-------------------------------- */
+.article-starWars{
+    width:800px;
+    height:600px;
+    background:rgb(20,20,20);
+    color: #ffc909;
+    border: 2px solid rgb(175, 235, 11);
+    perspective: 450px;
+    overflow:hidden;
+  
+}
+.article-starWars::after{
+    content:'';
+    position:fixed;
+    top:0;
+    width:100%;
+    height:35%;
+    background:linear-gradient(180deg,rgba(20,20,20,1)40%,rgba(20,20,20,0)100%);
+    
+}
+.section-starWars{
+    position: relative;
+    animation: scroll 20s linear infinite;
+    transform: rotateX(20deg);
+     
+}
+
+.section-starWars p{
+    text-align: center;
+    font-size: 2vw;
+    line-height: 1.5em;
+    font-weight: 600;
+    /* text-align: justify; */
+}
+@keyframes scroll{
+    from {top:0; transform:translateZ(0) rotateX(20deg)}
+    to {top: -1000px; transform:translateZ(-500px)rotateX(21deg)}
+}
